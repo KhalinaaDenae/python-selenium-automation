@@ -64,7 +64,13 @@ _driver.FindElement(By.XPath("//*[@id='panel']/div/h1"));
 
 
 -- customized locators :
+** x path if can't find ID or CSS Selector
+
 - CSS SELECTORS
+ - to use in browser console : $$()
+ EX :
+ $$("#idname")
+
 
 - tag and ID
 
@@ -74,6 +80,8 @@ or
 
 EX : driver.find_element(By.CSS_SELECTOR, "input#email")
     driver.find_element(By.CSS_SELECTOR, "#email")
+
+    or driver.findElement(By.ID, "id name")
 
 
 - tag and class
@@ -95,6 +103,37 @@ tagName[attribute=value]
 
 
 - XPath
+
+
+
+
+
+
+CSS cs XPATH
+- css is faster , does not locate by text
+
+
+
+Behavior Driven Development ( BDD )
+
+- describes the behavior and expected outcome of a software system befor ebuilding it
+
+2 steps :
+- define the desired behavior of the software
+- build the software
+
+
+scenario -  test case name
+given - preconditions
+when - actions of test case
+then - verificaiton
+and - duplicates the word above
+
+
+
+all files with test cases have feature in name "product_search.feature"
+
+
 
 
 """

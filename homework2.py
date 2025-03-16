@@ -50,6 +50,11 @@ signInText = driver.find_element(By.TAG_NAME, "span").text
 
 print(signInText)
 
+# verification
+# expetced = "Sign into your Target account"
+#actual = driver.find_element(By.TAG_NAME, "span").text
+# assert expected == actual
+
 # SignIn button is shown
 
 driver.find_element(By.ID, "login")
