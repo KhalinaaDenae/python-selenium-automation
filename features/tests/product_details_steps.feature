@@ -1,6 +1,10 @@
 
-Feature: # Enter feature name here
-  # Enter feature description here
+Feature: Product details page
 
-  Scenario: # Enter scenario name here
-    # Enter steps here
+
+  Scenario: User can select colors
+    Given Open target product page
+    Then Verify user can click through colors
+
+
+
