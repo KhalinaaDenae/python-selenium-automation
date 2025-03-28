@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
-from behave import given, when, then
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from behave import when, then
 from time import sleep, time
 
 BASE_URL = 'https://www.target.com/'
@@ -18,9 +20,9 @@ def add_item_to_cart(context):
 
 @when('confirm add to cart on side navigation')
 def click_add_to_cart_on_side_nav(context):
-    sleep(5)
-    context.driver.find_element(*SIDE_NAV_ADD_TO_CART).click()
-    sleep(5)
+    WebDriverWait(context.driver, 10).until(
+        EC.element_to_be_clickable(SIDE_NAV_ADD_TO_CART)
+    ).click()
 
 
 @when("the user clicks on the first search result")
@@ -39,5 +41,6 @@ def verify_results(context, search_term):
 
 @when('click view cart')
 def click_view_cart(context):
-    context.driver.find_element(*VIEW_CART_BTN).click()
-    sleep(5)
+    WebDriverWait(context.driver, 10).until(
+        EC.element_to_be_clickable(VIEW_CART_BTN)
+    ).click()
