@@ -1,4 +1,3 @@
-# Created by khalinaboyce at 3/16/25
 Feature: Account sign in
 
   Scenario: Verify a logged out user can navigate to the sign in page

@@ -102,6 +102,8 @@ tagName[attribute=value]
 - tag, class and attribute
 
 
+Go from  upper element to child element
+#upperelement input.classname.ofchildelement
 - XPath
 
 
